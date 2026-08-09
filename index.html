@@ -3,109 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image to PDF Converter</title>
-    <!-- jsPDF Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <link rel="stylesheet" href="./css/index.css" />
+    <title>Document</title>
   </head>
   <body>
-    <div class="header-bar">
-      <h1>Image to PDF Converter</h1>
-      <button class="theme-toggle-btn" id="themeToggleBtn">
-        <span id="themeIcon">🌙</span> <span id="themeText">ダークモード</span>
-      </button>
-    </div>
-
-    <div class="main-wrapper">
-      <!-- 左枠：入力・操作コントロール -->
-      <div class="container">
-        <div class="form-group">
-          <label for="outputFileName"
-            >出力するPDFのファイル名 (未指定の場合は共通部分):</label
-          >
-          <input
-            type="text"
-            id="outputFileName"
-            class="input-text"
-            placeholder="例: my_document"
-          />
-        </div>
-
-        <div class="drop-zone" id="dropZone">
-          <svg
-            width="40"
-            height="40"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            style="color: var(--sub-text)"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002-2Z"
-            ></path>
-          </svg>
-          <p>
-            ここに画像ファイル (PNG, JPG, WebP等) をドラッグ＆ドロップ<br />またはクリックして選択
-          </p>
-          <input
-            type="file"
-            id="fileInput"
-            class="file-input"
-            accept="image/*"
-            multiple
-          />
-        </div>
-
-        <!-- ワンボタン型 並び替えコントロール -->
-        <div class="sort-bar">
-          <button class="btn-toggle-sort" id="btnToggleSort">
-            🔄 並び替え: 名前順 (A→Z / 0→9)
-          </button>
-        </div>
-
-        <!-- 画像ファイルリスト -->
-        <div class="file-list" id="fileList"></div>
-
-        <div class="actions">
-          <button class="btn btn-secondary btn-flex" id="btnClear" disabled>
-            全消去
-          </button>
-          <button class="btn btn-primary btn-flex" id="btnConvert" disabled>
-            PDFを作成・プレビュー
-          </button>
-        </div>
-      </div>
-
-      <!-- 右枠：作成されたPDFプレビュー領域 -->
-      <div class="preview-container">
-        <div class="preview-header">
-          <h2>PDF Preview</h2>
-          <div class="preview-actions">
-            <button
-              class="btn btn-secondary"
-              id="btnOpenNewTab"
-              style="display: none"
-            >
-              ↗️ 別タブで表示
-            </button>
-            <button
-              class="btn btn-success"
-              id="btnDownload"
-              style="display: none"
-            >
-              💾 ダウンロード
-            </button>
-          </div>
-        </div>
-        <div id="previewArea" style="flex: 1">
-          <div class="no-preview">PDFを生成するとここに表示されます</div>
-        </div>
-      </div>
-    </div>
-    <script src="./js/index.js"></script>
+    <form action="./index.html" method="get">
+      <input
+        id="input"
+        type="text"
+        name="next"
+        placeholder="ここに値を入力してください"
+        value=""
+      />
+      <input type="submit" value="送信" />
+    </form>
+    <script href="./js/index.js"></script>
   </body>
 </html>
